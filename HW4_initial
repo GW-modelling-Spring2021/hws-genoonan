@@ -1,2 +1,25 @@
-Did you upload the right file?  I'm not trying to be a smart Alec
-I don't see any answers, yet.
+Good start on this!
+
+1. You are right that the response is similar ... just be a bit more specific
+about WHY the well leads to this flow distribution.
+
+2. You are on a good track.  Try thinking holistically about how flow is
+occurring to/into/from the well and rework your answer slightly.  For
+example ... is water getting backed up anywhere?
+
+3. Good answer!  Combine this with #2 to intuit what is happening just outside of the
+capture zone, directly downgradient from the well.
+
+4. This is partially correct.  Just explain WHY the boundaries impact the drawdown. In
+answer to your question, for a confined aquifer the gradient does NOT impact the
+drawdown.  But, there is one more thing.  Right near the well the drawdown should be
+circular.  Why isn't it on your plot??
+
+5. Good thinking on the boundary fluxes.  Can you think of a way to compare the results
+for the centered and non-centered wells QUANTITATIVELY?  Good that you caught the
+'flip'.  To answer this, think about how matrix rows are defined in python versus
+MODFLOW.  Keep this in mind if you make your own plots (not using the built-in FloPy
+utilties)!
+
+BTW ... I love your keg of beer analogy!  But, a straw!  Sounds like a recipe for a
+hangover.
