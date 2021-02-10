@@ -5,16 +5,6 @@
 ## **Challenge:**
 A FloPy code is provided to you that recreates the 2D homogeneous box model with constant head boundary conditions.  You will use this to explore the impact of a pumping well.
 
- 1) For the initial well location, plot the flow into the left (constant head = 20) and out of the right (constant head = 10) boundaries.  (The code, as provided, makes this plot for you.)  Explain why the values are not constant along the boundary (relate to the definition of a Type I boundary).  Explain the shapes of the flow distributions and why they are not the same for the left (inflow) and right (outflow) boundaries.
-
- 2) Add a series of the left-to-right flow along a line that passes through the center of the well [:,12].  How do you interpret the flow along this transect?  Hint, also look at the flow along a transect just upgradient from the well [:,11].
-
- 3) Then, look at the plot of equipotentials and flow vectors.  Describe how water flows through the domain.  To aid in your description, draw a line through all of the flow vectors that terminate in the well.  This approximates the capture zone of the well. Use this to refine your description of the flow system, being as specific as possible about where water that ends up being extracted by the well originates on the inflow boundary.
-
- 4) Then, look at the plan view drawdown plot.  Why aren't the drawdown contours circles?  Either explain why this is correct, or fix the plot.
-
- 5) Move the well to [0,5,5].  Use all plots necessary to describe fully how water is flowing through the domain with the well in this location.  Be sure to include the drawdown plot in your discussion - compare this plot to the equipotentials and flow vectors.  Something is not right about how the well location is shown.  Fix it and explain what was wrong!!
-
 ### Model Description
 
 - Homogeneous medium with a well pumping at a constant rate.  
@@ -93,7 +83,7 @@ Ty Feedback: You are right that the response is similar ... just be a bit more s
 > Amended Answer:  You can see that the flow is higher towards the middle of the boundary and lower to the top and bottom on the left side (flow source), and the opposite is seen on the right hand side where the flow is lower near the center of the boundary and a little higher to the top and bottom.   These curved shapes reflect the location of the well, which is pulling water from the left boundary, and capturing water that would have made it to the right boundary.   Thus the related flow increase and decrease at the center of the boundaries (well location) at the left and right boundaries, respectively.  
 
 ***2) Add a series of the left-to-right flow along a line that passes through the center of the well [:,12].  How do you interpret the flow along this transect?  Hint, also look at the flow along a transect just upgradient from the well [:,11].***
-> Answer:   Figure 2a and 2b show the flow through the center of the well and just upgradient from the well.  These plots are starkly different in that the flow through the center of the well decreases significantly (by ~50%).  I believe this would be due to the well pumping the water out at a rate that is slower than the flow in?  The constant head at the left boundary is 20, and the flow rate out of the well is -10.  How do these relate??
+> Answer:   Figure 2 shows the flow through the center of the well and just upgradient from the well.  These flow paths are starkly different in that the flow through the center of the well decreases significantly (by ~50%).  I believe this would be due to the well pumping the water out at a rate that is slower than the flow in?  The constant head at the left boundary is 20, and the flow rate out of the well is -10.  How do these relate??
 
 >The flow upgradient increases sharply (by around ~50%).  The water that is getting backed up at the well is now being forced up and around the well and is moving faster??
 
