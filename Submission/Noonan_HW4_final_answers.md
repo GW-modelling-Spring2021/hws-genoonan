@@ -42,13 +42,10 @@ well at [0,12,12]
 ![](assets/Noonan_HW4_draftanswers-95f4877f.png)
 
 
-*Figure 2a: Base case boundary fluxes and flux through midline of domain and flux through just upgradient of well..*
+*Figure 2: Base case boundary fluxes and flux through midline of domain and flux through just upgradient of well..*
 
 flow along a line that passes through the center of the well [:,12] and flow along a transect just upgradient from the well [:,11]
 ![](assets/Noonan_HW4_final_answers-351dc6b8.png)
-
-*Figure 2b: Base case boundary fluxes and flux through just upgradient of well.*
-
 
 
 *Figure 3: Base case equipotentials and flow vectors.*
