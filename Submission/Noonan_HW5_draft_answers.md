@@ -19,11 +19,14 @@ You need to modify the model to:
   - Model a system with zero recharge except for a farm located in [6:10, 6:10] - in python terms.  Recharge beneath the farm is 1e-4 m/day due to excess irrigation.  
   - Start the well pumping at a rate of 8 m3/day.  
 
+
+---------------------------------------------------------
+------------------------------------------------------------
 ### Noonan - Notes
 
-Lecture Notes:
+*Lecture Notes:*
 
-Notes on Recharge with MODFLOW
+*Notes on Recharge with MODFLOW*
   >   - unconfined aquifer conditions are what makes sense for recharge (convertible cells in MODFLOW - convert between confined and unconfined on the fly)
   - Change head to 15 and 5
     - slope will be the same: gradient same, K same, same flow through system. However - aquifer thickness is 10.  Second case will have an unsaturated zone.  
@@ -32,7 +35,7 @@ Notes on Recharge with MODFLOW
   - Non-linear problem: we don't know what the head distribution is until we know the saturated thickness.  But we don't know the head distribution until we know the saturated thickness.  All we know is it will be a curve.  Complicated because part of aquifer is confined, other part is unconfined.   The top portion will be linear because it's still confined, then becomes non-linear at water table, where slope continually increases to boundary because thickness is continually decreasing.  Rate of decrease depends on head needed to establish the steady-state flow.
   - Recharge is flux of water across the water table.  Recharge = P-ET (for steady state).  
 
-For model with confined and unconfined zones:
+*For model with confined and unconfined zones:*
   >- Equipotential surface at water table, where head is zero, acts as no-flow boundary.  For MODFLOW to handle it, it converts the cell (thickness of layer to closest layer thickness dependent on water table elevation (for unconfined aquifer).   
   -  It's a Non-linear problem: Don't know water level until solve flow problem, don't know how to solve flow problem until we know what the thickness is.  Have to guess water table elevation, solve flow problem for that distribution of transmissivities.   Check do we end up with head distribution that we assumed to start with?  If no, adjust head and solve again until head distribution gives us the transmissivity that, coupled with that head distribution or gradient, ends up in steady state flow conditions.
 
@@ -45,8 +48,7 @@ Recharge in the form of excess irrigation from a farm (square area in middle of 
 Recharge effect on head -
   >- reduced gradient on left (less water in ) -  increased gradient on right (more water out), ponded water so saturated thickness is higher.  
   - size of curve depends on how much water is being added. Enough water can even change direction of gradient (push out both sides)
-
-
+----------------------------------
 -------------------------------------
 
 ### Noonan - Challenge Response
@@ -54,7 +56,7 @@ Recharge effect on head -
 ***1) For the initial boundary head values and pumping and recharge rates, compare the head versus x distance - along a transect from the middle of one constant head boundary to the other - to the results for the BoxModel.  Now reduce the boundary heads to 15 and 5.  Compare this result and explain any observed differences.  The overall gradient is the same, as is the K of the medium ... is the flow the same for both boundary conditions?  Why or why not?***
 > Answer: For initial boundary head values and pumping and recharge rates, the starting well is zero pumping and recharge is 0 - in this way, it equals the basic homogeneous box model simply with constant head values of 20 on the left and 10 on the right.
 
-> After reducing the heads to 15 and 5 and comparing the plots (see below), the noticeable difference is that the 15,5 plot shows some curving towards the left side of the plot - the gradient is no longer linear.  
+> After reducing the heads to 15 and 5 and comparing the plots (see below), the noticeable difference is that the 15,5 plot shows some curving towards the right side of the plot - the gradient is no longer linear.  
 
 > In the two cases of 20, 10 and 15, 5: K is same, gradient is decreased, so flow must also be decreased.  Transmissivity is changing because saturated thickness is changing.  Aquifer thickness is 10.  So, the second case (15,5) will have an unsaturated zone.  Flow only takes place through the saturated part of aquifer.  Aquifer thickness is cut in half - so transmissivity is also halved.  On the right hand side, it's harder for water to flow through, but the same amount needs to flow through to maintain steady state conditions.  Therefore, the gradient on right needs to be steeper to account for flow, but still needs to meet point 15 on left and 5 on right for constant head conditions. thus, the gradient becomes curved across the model instead of constant decrease like in the 20,10 condition.
 
