@@ -1,0 +1,12 @@
+Excellent work ... 100%!  The 1D flow representation in MODFLOW for the mounding
+case is confusing.  Don't worry too much about it.  The point is just that
+by defining a single layer there is really no way for the model to represent
+vertical flow.  Flow enters the tops of the cells as recharge, vertically.  But,
+flow between cells is calculated node to node ... all of the nodes lie in a
+plane!  Good work on the well mass balance, too.  It isn't a simple problem.
+You have the right idea for calculating the recharge that is captured.
+Remember that the well is pumping at 8 m3/d ... so, you can calculate the flow
+into the boundary by differencing.  Alternatively, you need to plot the flow
+rate (consistent units, m3/d) versus y location and estimate the length of the
+boundary that is captured.  You can then sum the inflow over that area.  Does
+all of this make sense?  If not ... please ask for clarification in class today!!
