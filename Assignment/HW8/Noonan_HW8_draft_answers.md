@@ -49,6 +49,9 @@ The pump only extracts water from the bottom layer and recharge occurs in the up
 
 
 ### Key Figures
+Incorrect Figure A)
+
+![](assets/Noonan_HW8_draft_answers-a9bd9093.png)
 
 Fig a) Time capture zone for four times and an infinite capture zone without layers.  You can combine these into one figure or show a separate figure for each time.
 
